@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tcc_rascunho/LoginPage.dart';
+import 'package:app_tcc/LoginPage.dart';
 
 class historico extends StatefulWidget {
   @override
@@ -25,7 +25,6 @@ class _historicoState extends State<historico> {
         ],
       ),
 
-      body: ,
 
     );
   }

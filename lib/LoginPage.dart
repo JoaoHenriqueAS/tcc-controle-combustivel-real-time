@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tcc_rascunho/Home.dart';
+import 'package:app_tcc/Home.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -25,8 +25,8 @@ class _LoginPageState extends State<LoginPage> {
                   keyboardType: TextInputType.text,
                   style: new TextStyle(color: Colors.white, fontSize: 25),
                   decoration: InputDecoration(
-                      labelText: "Usuário",
-                      labelStyle: TextStyle(color: Colors.white)
+                    labelText: "Usuário",
+                    labelStyle: TextStyle(color: Colors.white)
                   ),
                 ),
                 Divider(),

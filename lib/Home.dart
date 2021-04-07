@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:tcc_rascunho/historico.dart';
+import 'package:app_tcc/historico.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -83,9 +83,9 @@ class _HomeState extends State<Home> {
                           Icon(Icons.menu_book, size: 50.0, color:Colors.white),
                           RaisedButton(
                               onPressed: () => {
-                                Navigator.push(
-                                    context, MaterialPageRoute(
-                                    builder: (BuildContext context) => historico()))
+                              Navigator.push(
+                              context, MaterialPageRoute(
+                              builder: (BuildContext context) => historico()))
                               },
                               child: Text("Histórico")
                           ),

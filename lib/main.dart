@@ -1,4 +1,4 @@
-import 'package:tcc_rascunho/LoginPage.dart';
+import 'package:app_tcc/LoginPage.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -16,4 +16,6 @@ class TCC extends StatelessWidget {
     );
   }
 }
+
+
 
