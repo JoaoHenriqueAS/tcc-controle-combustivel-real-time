@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tcc_rascunho/historico.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -10,22 +11,27 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Controle de Combustível"),
+        title: Text("Dashboard"),
         centerTitle: true,
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.green[800],
         actions: [
           IconButton(icon: Icon(Icons.refresh),
             onPressed:() {}, ),
 
           IconButton(icon: Icon(Icons.logout),
-            onPressed:() {}, )
+            onPressed:() {
+              Navigator.pop(
+                  context, MaterialPageRoute(
+                  builder: (BuildContext context) => Home()));
+            },
+          )
         ],
       ),
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.green,
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Icon(Icons.person_outline, size: 120.0, color:Colors.deepOrange),
+          Icon(Icons.local_gas_station, size: 120.0, color:Colors.lightGreenAccent),
           Center(
             child: Container(
               child: GridView.count(
@@ -41,52 +47,53 @@ class _HomeState extends State<Home> {
                 children: [
 
                   Card(
-                    color: Colors.deepOrange[300],
+                    color: Colors.green[800],
                     child: Container(
-                      padding: EdgeInsets.all(15.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Icon(Icons.local_gas_station, size: 35.0, color:Colors.black),
-                          Text("Mostrador de combustível", textAlign: TextAlign.center),
-                          Text("     teste    ", textAlign: TextAlign.center),
-                          Text("50 Litros", textAlign: TextAlign.center)
+                          Icon(Icons.local_gas_station, size: 50.0, color:Colors.white),
+                          Divider(),
+                          Text("Combustível")
                         ],
                       ),
                     ),
                   ),
 
                   Card(
-                    color: Colors.deepOrange[300],
+                    color: Colors.green[800],
                     child: Container(
-                      padding: EdgeInsets.all(15.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Icon(Icons.battery_charging_full, size: 35.0, color:Colors.black),
-                          Text("Mostrador de bateria", textAlign: TextAlign.center),
-                          Text("         ", textAlign: TextAlign.center),
-                          Text("90% de Bateria", textAlign: TextAlign.center)
+                          Icon(Icons.battery_charging_full, size: 50.0, color:Colors.white),
+                          Divider(),
+                          Text("Bateria")
                         ],
                       ),
                     ),
                   ),
 
                   Card(
-                    color: Colors.deepOrange[300],
+                    color: Colors.green[800],
                     child: Container(
-                      padding: EdgeInsets.all(15.0),
+                      padding: EdgeInsets.all(10.0),
                       child: Column(
                         children: [
-                          Icon(Icons.menu_book, size: 35.0, color:Colors.black),
-                          Text("Histórico de consumo", textAlign: TextAlign.center),
-                          Text("              ", textAlign: TextAlign.center),
-                          Text("Banco de dados", textAlign: TextAlign.center)
+                          Icon(Icons.menu_book, size: 50.0, color:Colors.white),
+                          RaisedButton(
+                              onPressed: () => {
+                                Navigator.push(
+                                    context, MaterialPageRoute(
+                                    builder: (BuildContext context) => historico()))
+                              },
+                              child: Text("Histórico")
+                          ),
                         ],
                       ),
                     ),
                   )
-
                 ],
-
               ),
             ),
           )
@@ -97,3 +104,5 @@ class _HomeState extends State<Home> {
     );
   }
 }
+
+
