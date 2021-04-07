@@ -1,13 +1,19 @@
+import 'package:tcc_rascunho/LoginPage.dart';
 import 'package:flutter/material.dart';
-import 'package:app_tcc/LoginPage.dart';
-import 'package:app_tcc/Home.dart';
-
 
 void main(){
-  runApp(MaterialApp(
-    home:LoginPage(),
-  ));
+  runApp(TCC());
 }
 
+class TCC extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'TCC',
+      theme: ThemeData(primarySwatch: Colors.green),
+      home: LoginPage(),
 
+    );
+  }
+}
 
