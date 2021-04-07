@@ -56,7 +56,7 @@ class _HomeState extends State<Home> {
                         children: [
                           Icon(Icons.local_gas_station, size: 35.0, color:Colors.black),
                           Text("Mostrador de combustível", textAlign: TextAlign.center),
-                          Text("         ", textAlign: TextAlign.center),
+                          Text("     teste    ", textAlign: TextAlign.center),
                           Text("50 Litros", textAlign: TextAlign.center)
                         ],
                       ),
