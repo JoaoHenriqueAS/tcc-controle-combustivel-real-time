@@ -1,6 +1,6 @@
-# app_tcc
+# TCC CONTROLE DE COMBUSTIVEL - REAL TIME
 
-Controle de combustivel - TCC Unip 2021
+Aplicativo para controle de combustivel com finalidade de evitar fraudes em postos - TCC Unip 2021
 
 ## Getting Started
 
