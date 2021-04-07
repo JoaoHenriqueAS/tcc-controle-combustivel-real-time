@@ -21,7 +21,7 @@ public class MySqlConfig {
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
 			
-			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tcc", "root", "joao4638");
+			Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tcc", "root", "senha");
 			
 			Statement stmt = con.createStatement();
 			ResultSet rs = stmt.executeQuery("select * from usuarios where userName = " + aspas + usuario + aspas + "and password = " + aspas + senha + aspas);
