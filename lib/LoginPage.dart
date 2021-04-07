@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:app_tcc/Home.dart';
+import 'package:tcc_rascunho/Home.dart';
+
 
 class LoginPage extends StatefulWidget {
   @override
@@ -22,7 +23,7 @@ class _LoginPageState extends State<LoginPage> {
                 TextFormField(
                   autofocus: true,
                   keyboardType: TextInputType.text,
-                  style: new TextStyle(color: Colors.white, fontSize: 20),
+                  style: new TextStyle(color: Colors.white, fontSize: 25),
                   decoration: InputDecoration(
                       labelText: "Usuário",
                       labelStyle: TextStyle(color: Colors.white)
@@ -33,7 +34,7 @@ class _LoginPageState extends State<LoginPage> {
                   autofocus: true,
                   obscureText: true,
                   keyboardType: TextInputType.text,
-                  style: new TextStyle(color: Colors.white, fontSize: 20),
+                  style: new TextStyle(color: Colors.white, fontSize: 25),
                   decoration: InputDecoration(
                       labelText: "Senha",
                       labelStyle: TextStyle(color: Colors.white)
@@ -44,7 +45,11 @@ class _LoginPageState extends State<LoginPage> {
                 ButtonTheme(
                   height: 50.0,
                   child: RaisedButton(
-                    onPressed: () => {},
+                    onPressed: () => {
+                      Navigator.push(
+                          context, MaterialPageRoute(
+                          builder: (BuildContext context) => Home()))
+                    },
                     child:  Text(
                       "Entrar",
                       style: TextStyle(color: Colors.black, fontSize: 20),
@@ -61,5 +66,3 @@ class _LoginPageState extends State<LoginPage> {
     );
   }
 }
-
-
