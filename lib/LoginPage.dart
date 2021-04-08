@@ -25,19 +25,8 @@ class _LoginPageState extends State<LoginPage> {
                   keyboardType: TextInputType.text,
                   style: new TextStyle(color: Colors.white, fontSize: 25),
                   decoration: InputDecoration(
-                    labelText: "Usuário",
+                    labelText: "Seu nome",
                     labelStyle: TextStyle(color: Colors.white)
-                  ),
-                ),
-                Divider(),
-                TextFormField(
-                  autofocus: true,
-                  obscureText: true,
-                  keyboardType: TextInputType.text,
-                  style: new TextStyle(color: Colors.white, fontSize: 25),
-                  decoration: InputDecoration(
-                      labelText: "Senha",
-                      labelStyle: TextStyle(color: Colors.white)
                   ),
                 ),
                 Divider(),
